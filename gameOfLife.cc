@@ -1,3 +1,5 @@
+//Edmund Goodman - Creative Commons Attribution-NonCommercial-ShareAlike 2.5
+//Conway's Game of Life
 #include<iostream>
 
 //Set initial conditions
