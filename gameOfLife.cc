@@ -57,7 +57,7 @@ int main() {
   //Print the grid
   printGrid(grid);
 
-  while (true) {
+  for (int i=0; i<iterations; i++) {
     //Generate a array of the number of neighbours each grid square has
     int gridNeighbourValues[height][width];
     for (int y=0; y<height; y++) {
@@ -81,12 +81,6 @@ int main() {
 
     //Print the grid
     printGrid(grid);
-
-    //Stop looping when the required number of iterations have been evaluated
-    iterations --;
-    if (iterations == 1) {
-      break;
-    }
   }
 
   return 0;
