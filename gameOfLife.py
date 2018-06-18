@@ -70,7 +70,7 @@ def getUpdates(height, width, grid, updates=[]):
     return height, width, updates
 
 #Build the grid
-iterations, width, height = 0, 5, 5 #If iterations = 0, it goes on forever
+iterations, width, height = 100, 5, 5
 grid, oldGrid = [[0]*width for _ in range(height)], None
 
 #Add some data to the initial grid (e.g. a 'Glider')
@@ -79,7 +79,7 @@ grid[2][0]=1; grid[2][1]=1; grid[2][2]=1; grid[1][2]=1; grid[0][1]=1
 #Output the grid
 printGrid(grid)
 
-while True:
+for i in range(iterations):
 
     #Create a list of squares to update, and how to update them
     height, width, updates = getUpdates(height, width, grid)
@@ -99,11 +99,6 @@ while True:
     #Output the grid
     if updates != []:
         printGrid(grid)
-
-    #Break after upper limit of iterations
-    iterations -= 1
-    if iterations == 1:
-        break
 
     #Break if grid is static
     if oldGrid == grid:
