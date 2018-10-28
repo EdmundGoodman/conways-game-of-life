@@ -1,5 +1,3 @@
-//Edmund Goodman - Creative Commons Attribution-NonCommercial-ShareAlike 2.5
-//Conway's Game of Life
 #include<iostream>
 
 //Set initial conditions
@@ -8,8 +6,10 @@ extern const int height = 10;
 
 void printGrid(int grid[height][width]) {
   //Print the grid array
+  //system("clear");
   for (int y=0; y<height; y++) {
     for (int x=0; x<width; x++) {
+      //std::cout << grid[y][x];
       if (grid[y][x] == 0) {
         std::cout << " ";
       } else {
